@@ -1,1 +1,18 @@
-.env
+If you accidentally added the `.env` file to your Git repository, you need to remove it from the repository while keeping it locally. Follow these steps:
+
+1. Remove the `.env` file from the Git index:
+    ```bash
+    git rm --cached .env
+    ```
+
+2. Commit the change:
+    ```bash
+    git commit -m "Remove .env file from repository"
+    ```
+
+3. Push the changes to the remote repository:
+    ```bash
+    git push
+    ```
+
+Now, `.env` will no longer be tracked by Git, and your `.gitignore` will ensure it stays untracked.
