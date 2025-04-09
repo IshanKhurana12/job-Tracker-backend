@@ -7,12 +7,16 @@ const PORT = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 const jwtChecker =require('./utilities/middlewares/jwtChecker.middleware.js');
 const applicationRouter= require('./routes/applicationRouter.js');
+const cors= require('cors');
+
+app.use(cors());
 dotenv.config();
 // Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 // user router Routes
 app.use('/', userRouter);
+
 //application router Routes
 app.use('/application', jwtChecker, applicationRouter);
 
