@@ -11,7 +11,7 @@ A simple job tracking backend using **Express.js** and **MVC architecture**. Thi
 - Get a list of all job applications
 - View a single job application
 
-- Method	Route	Description
+## Route	Description
 -GET	  /	          Home or welcome route
 -POST	/signup   	Register a new user
 -POST	/login	    Authenticate user
